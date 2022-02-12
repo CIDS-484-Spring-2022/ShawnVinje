@@ -1,4 +1,7 @@
 # ShawnVinje
+
+Video explanation can be found at this link: https://mediaspace.wisconsin.edu/media/Shawn+Vinje+Capstone+Milestone+1/1_8olob3lr
+
 Task management web application built with PHP and MySQL running on Apache
 
 This project will allow users to create their own accounts to create and store tasks that they want to keep records of and revisit in the future.
