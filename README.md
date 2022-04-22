@@ -14,3 +14,5 @@ Second Milestone video explanation can be found at this link: https://mediaspace
 Since then, I have created a page to list all tasks that a user currently has, as well as pages for creating and deleting tasks which have links on the tasks page.
 
 Currently working on fixing the update tasks page as well as adding the full functionality of creating an account and logging in.
+
+Third Milestone video explanation can be found at this link: https://mediaspace.wisconsin.edu/media/ShawnVinje+Milestone+3/1_dlquiums
