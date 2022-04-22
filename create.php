@@ -92,7 +92,7 @@
                 mysqli_query($conn, $sql);
                 
                 if(!mysqli_query($conn, $sql)) {
-                    echo '<h2 class="text-center"><br>Error' . 
+                    echo '<h2 class="text-center"><br>Error: ' . 
                             'mysqli_connect_error()</h2>';
                 }
                 else {

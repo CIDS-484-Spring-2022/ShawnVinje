@@ -2,10 +2,10 @@
 
     $success = false;
     $error = false;
-    $exists = true;
+    $exists = false;
     
-    if(isset($_POST["signupbutton"])) {
-        header("location:signup.php");
+    if(isset($_POST["loginbutton"])) {
+        header("location:login.php");
     }
 
     if(isset($_POST["button"])) {
@@ -23,19 +23,25 @@
         $num = mysqli_num_rows($result);
     
         // check if username exists
-        if($num == 1) {
+        if($num == 0) {
+            if(($password == $cpassword) && ($exists == false)) {
             
-            if(($password == $cpassword)) {
-                $success = true;
-                header("location:index.php");
+                $sql = "Insert into 'users' ('Username', 'Password', 'Date')
+                        Values ('$username', '$password', current_timestamp())";
+            
+                $result = mysqli_query($conn, $sql);
+            
+                if ($result) {
+                    $success = true;
+                }
             }
             else {
                 $error = true;
             }
         }
     
-        if($num == 0) {
-            $exists = false;
+        if($num > 0) {
+            $exists = true;
         }
 
     }
@@ -63,7 +69,8 @@
     
         if($success) {
             echo '<h2 class="text-center">Success!</h2>';
-            echo '<h3 class="text-center">You have successfully logged in!</h3>';
+            echo '<h3 class="text-center">Your account is now created
+                                          and you can login</h3>';
         }
         
         if($error) {
@@ -71,9 +78,9 @@
             echo '<h3 class="text-center">Passwords do not match</h3>';
         }
         
-        if(!$exists) {
+        if($exists) {
             echo '<h2 class="text-center">Error!</h2>';
-            echo '<h3 class="text-center">That username does not exist</h3>';
+            echo '<h3 class="text-center">That username already exists</h3>';
         }
 
     ?>
@@ -104,10 +111,10 @@
                     <br>
                 </div> 
                 <button type="submit" class="btn btn-success" name="button">
-                    Login
+                    Create Account
                 </button>
-                <button type="submit" class="btn btn-warning" name="signupbutton">
-                    Need to Create an Account?
+                <button type="submit" class="btn btn-warning" name="loginbutton">
+                    Already have an account?
                 </button>
             </form>
         </div>

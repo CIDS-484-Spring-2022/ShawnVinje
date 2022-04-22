@@ -11,7 +11,7 @@
     
     // check connection
     if(!$conn) {
-        echo ("Error " . mysqli_connect_error());
+        echo ("Error: " . mysqli_connect_error());
     }
     
 ?>
