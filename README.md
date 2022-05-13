@@ -16,3 +16,5 @@ Since then, I have created a page to list all tasks that a user currently has, a
 Currently working on fixing the update tasks page as well as adding the full functionality of creating an account and logging in.
 
 Third Milestone video explanation can be found at this link: https://mediaspace.wisconsin.edu/media/ShawnVinje+Milestone+3/1_dlquiums
+
+Final Video: https://mediaspace.wisconsin.edu/media/Shawn+Vinje+Final/1_9ih0419h
